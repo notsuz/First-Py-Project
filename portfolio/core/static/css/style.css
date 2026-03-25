@@ -1,0 +1,41 @@
+
+
+@keyframes up-down{
+    0%{
+        transform: translateY(10px);
+    }
+    100%{
+        transform: translateY   (-10px);
+    }
+}
+
+.hero-img{
+    animation: up-down 3s infinite alternate-reverse ease-in-out;
+    height: 80%;
+    width: 95%;
+}
+
+.team_img{
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    border: 2px solid black;
+}
+.c_img{
+    height: 80vh;
+    border-radius: 20px;
+}
+
+.first{
+    height: 80vh;
+}
+
+.portfolio{
+    height: 80vh;
+}
+
+
+.custom-tooltip {
+  --bs-tooltip-bg: black;
+  --bs-tooltip-color: white;
+}

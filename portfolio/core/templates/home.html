@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+
+    <!-- bootstrap link -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
+    <!-- font awesome link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- extenrnal css -->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+</head>
+
+<body class="bg-dark" data-bs-theme="dark" >
+    <!-- main div start -->
+    
+        <!-- nav bar start -->
+        <nav class="navbar navbar-expand-lg bg-black sticky-top">
+            <div class="container">
+                <a class="navbar-brand" href="#"><img src="{% static 'images/logo.png' %}" alt="" height="50px"
+                        width="50px"></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mx-auto gap-3 mb-2 mb-lg-0 fw-5">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#team">My team</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#services">our Services</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                Works
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Web development</a></li>
+                                <li><a class="dropdown-item" href="#">Android development</a></li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item" href="#">View all</a></li>
+                            </ul>
+                        </li>
+                        <!-- <li class="nav-item">
+                        <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+                    </li> -->
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="#contact">Contact Me</a>
+                        </li>
+                    </ul>
+                    <div class=" gap-3 mx-3">
+                        <button type="button" class="btn btn-primary border rounded-circle"><i
+                                class="fa-brands fa-facebook"></i></button>
+                        <button type="button" class="btn btn-danger border rounded-circle"><i
+                                class="fa-brands fa-pinterest"></i></button>
+                    </div>
+                    <div class=" vr me-3 opacity-50"></div>
+                    <button type="button" class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">Connect with me
+
+                </div>
+            </div>
+        </nav>
+        <!-- nav bar end -->
+
+        <!-- main container start -->
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-md-6 my-5 first">
+                    <h1 class="fw-bold text-primary">Unlock your Potential</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel, distinctio dolorum! Doloremque
+                        animi, fugit eligendi vel rem iusto neque. Ipsam recusandae autem consequuntur modi nemo
+                        reiciendis doloremque impedit eligendi, animi totam, quia repellat cumque labore ratione amet
+                        adipisci id voluptatem maiores possimus soluta doloribus esse repellendus. Cumque, laboriosam
+                        consequuntur. Blanditiis rem placeat, ipsum dolorum natus unde animi suscipit magnam ullam
+                        deleniti consequatur facilis quaerat laborum aut, vero officia commodi, esse error illum
+                        excepturi accusamus! Tenetur reprehenderit pariatur voluptatem laudantium voluptates nemo aut
+                        mollitia, maiores alias magnam. Eius quam debitis dicta aperiam recusandae perspiciatis optio
+                        unde laborum, molestiae ipsum rerum? Ullam.
+                    </p>
+                    <button class="btn btn-primary" data-bs-toggle="tooltip" data-bs-title="Click here to learn more"
+                        data-bs-placement="bottom" data-bs-custom-class="custom-tooltip">Request Demo</button>
+                    <button class="btn btn-outline-primary">Get Started</button>
+                </div>
+                <div class="col-12 col-md-6">
+                    <img src="{% static 'images/hero.png' %}" class="img-fluid hero-img" alt="">
+                </div>
+            </div>
+        </div>
+        <!-- main conterner end -->
+
+        <!-- portfolio section start -->
+        <section>
+            <div class="container">
+                <h2 class="text-center text-primary fw-bold">My Portfolio</h2>
+                <div class="d-flex">
+                    <hr class="flex-grow-1 border border-2 border-primary opacity-100">
+                    <i class="fa-solid fa-star text-warning"></i>
+                    <i class="fa-solid fa-star text-warning"></i>
+                    <i class="fa-solid fa-star text-warning"></i>
+                    <hr class="flex-grow-1 border border-2 border-primary opacity-100">
+                </div>
+
+
+                <div class="row my-3 g-4">
+                    <div class="col-12 col-md-4 col-lg-4">
+                        <div class="card h-100 border border-primary" >
+                            <img src="{% static 'images/logo.png' %}" class="card-img-top" alt="..." height="100px"
+                                width="100px">
+                            <div class="card-body">
+                                <h5 class="card-title">E-commerce Website</h5>
+                                <p class="card-text">Created using HTML, CSS, Bootstrap for frontend, with django in
+                                    backend
+                                </p>
+                                <a href="#" class="btn btn-primary">View details</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-4 col-lg-4">
+                        <div class="card h-100 border border-primary" >
+                            <img src="{% static 'images/logo.png' %}" class="card-img-top" alt="..." height="100px"
+                                width="100px">
+                            <div class="card-body">
+                                <h5 class="card-title">Blog Website</h5>
+                                <p class="card-text">Created using HTML, CSS, Bootstrap for frontend, with django in
+                                    backend
+                                </p>
+                                <a href="#" class="btn btn-primary">View details</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-4 col-lg-4">
+                        <div class="card h-100 border border-primary" >
+                            <img src="{% static 'images/logo.png' %}" class="card-img-top" alt="..." height="100px"
+                                width="100px">
+                            <div class="card-body">
+                                <h5 class="card-title">Bus reservation Website</h5>
+                                <p class="card-text">Created using HTML, CSS, Bootstrap for frontend, with django in
+                                    backend
+                                </p>
+                                <a href="#" class="btn btn-primary">View details</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row my-3 g-4">
+                    <div class="col-12 col-md-4 col-lg-4">
+                        <div class="card h-100 border border-primary" >
+                            <img src="{% static 'images/logo.png' %}" class="card-img-top" alt="..." height="100px"
+                                width="100px">
+                            <div class="card-body">
+                                <h5 class="card-title">E-commerce Website</h5>
+                                <p class="card-text">Created using HTML, CSS, Bootstrap for frontend, with django in
+                                    backend
+                                </p>
+                                <a href="#" class="btn btn-primary">View details</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-4 col-lg-4">
+                        <div class="card h-100 border border-primary" >
+                            <img src="{% static 'images/logo.png' %}" class="card-img-top" alt="..." height="100px"
+                                width="100px">
+                            <div class="card-body">
+                                <h5 class="card-title">Blog Website</h5>
+                                <p class="card-text">Created using HTML, CSS, Bootstrap for frontend, with django in
+                                    backend
+                                </p>
+                                <a href="#" class="btn btn-primary">View details</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-4 col-lg-4">
+                        <div class="card h-100 border border-primary" >
+                            <img src="{% static 'images/logo.png' %}" class="card-img-top" alt="..." height="100px"
+                                width="100px">
+                            <div class="card-body">
+                                <h5 class="card-title">Bus reservation Website</h5>
+                                <p class="card-text">Created using HTML, CSS, Bootstrap for frontend, with django in
+                                    backend
+                                </p>
+                                <a href="#" class="btn btn-primary">View details</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </section>
+        <!-- portfolio section end -->
+
+        <!-- my team section start -->
+        <section class="my-4" id="team">
+            <div>
+                <h2 class="fw-bold text-primary text-center">My Amaging Team</h2>
+                <hr class="w-25 mx-auto border border-2 border-primary opacity-100 mx-auto">
+                <div class="container my-5">
+                    <div class="row">
+                        <div class="col-12 col-md-4 col-lg-4 text-center">
+                            <img src="{% static 'images/team.jpg' %}" alt="" class="img-fluid team_img">
+                            <h3 class="py-2">Er. Amisha Neupane</h3>
+                            <p>CEO</p>
+                            <div>
+                                <button class="btn btn-outline-primary"> <i class="fa-brands fa-facebook"></i> </button>
+                                <button class="btn btn-outline-danger"> <i class="fa-brands fa-pinterest"></i> </button>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-4 col-lg-4 text-center">
+                            <img src="{% static 'images/team.jpg' %}" alt="" class="img-fluid team_img">
+                            <h3 class="py-2 ">Er. Sujal Maharjan</h3>
+                            <p>CEO</p>
+                            <div>
+                                <button class="btn btn-outline-primary"> <i class="fa-brands fa-facebook"></i> </button>
+                                <button class="btn btn-outline-danger"> <i class="fa-brands fa-pinterest"></i> </button>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-4 col-lg-4 text-center">
+                            <img src="{% static 'images/team.jpg' %}" alt="" class="img-fluid team_img">
+                            <h3 class="py-2 ">Er. Amisha Neupane</h3>
+                            <p>CEO</p>
+                            <div>
+                                <button class="btn btn-outline-primary"> <i class="fa-brands fa-facebook"></i> </button>
+                                <button class="btn btn-outline-danger"> <i class="fa-brands fa-pinterest"></i> </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+
+        </section>
+        <!-- my team section end-->
+
+        <!-- services sectio start -->
+        <section class="my-4" id="services">
+            <div class="services text-center">
+                <h2 class="fw-bold text-primary text-center">Our Services</h2>
+                <hr class="w-25 mx-auto border border-2 border-primary opacity-100 mx-auto">
+                <div class="container my-3">
+
+
+                    <div class="container">
+                        <div class="row">
+                            <div class="col">
+                                <div id="carouselExampleDark" class="carousel carousel-dark slide"
+                                    data-bs-ride="carousel">
+                                    <div class="carousel-indicators">
+                                        <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0"
+                                            class="active" aria-current="true" aria-label="Slide 1"></button>
+                                        <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1"
+                                            aria-label="Slide 2"></button>
+                                        <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2"
+                                            aria-label="Slide 3"></button>
+                                    </div>
+                                    <div class="carousel-inner">
+                                        <div class="carousel-item active " data-bs-interval="10000">
+                                            <img src="{% static 'images/mern.jpeg' %}" class="d-block w-100 c_img"
+                                                alt="...">
+                                            <div class="carousel-caption d-none d-md-block bg-dark opacity-25">
+                                                <h5 class="fw-bold text-light">Mern Support</h5>
+                                                <p class="text-light">Some representative placeholder content for the
+                                                    first slide.</p>
+                                            </div>
+                                        </div>
+                                        <div class="carousel-item" data-bs-interval="2000">
+                                            <img src="{% static 'images/ecom.jpeg' %}" class="d-block w-100 c_img"
+                                                alt="...">
+                                            <div class="carousel-caption d-none d-md-block bg-dark opacity-75">
+                                                <h5 class="fw-bold text-light">Second slide label</h5>
+                                                <p class="text-light">Some representative placeholder content for the
+                                                    second slide.</p>
+                                            </div>
+                                        </div>
+                                        <div class="carousel-item">
+                                            <img src="{% static 'images/ai.jpeg' %}" class="d-block w-100 c_img"
+                                                alt="...">
+                                            <div class="carousel-caption d-none d-md-block bg-dark opacity-50">
+                                                <h5 class="fw-bold text-light">Third slide label</h5>
+                                                <p class="text-light"> Some representative placeholder content for the
+                                                    third slide.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <button class="carousel-control-prev" type="button"
+                                        data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+                                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                        <span class="visually-hidden">Previous</span>
+                                    </button>
+                                    <button class="carousel-control-next" type="button"
+                                        data-bs-target="#carouselExampleDark" data-bs-slide="next">
+                                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                        <span class="visually-hidden">Next</span>
+                                    </button>
+                                </div>
+
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+        </section>
+        <!-- services sectio end -->
+
+        <!-- mail section Start -->
+        <section class="my-5">
+            <div class="container">
+                <div class="row">
+                    <div class="col-9 d-flex justify-content-center align-items-center flex-column ">
+                        <h3 class="fw-bold text-primary">Connect with us using Email</h3>
+                        <div class="input-group mb-3">
+                            <input type="text" class="form-control" placeholder="Enter Your Email"
+                                aria-label="Recipient’s username" aria-describedby="button-addon2">
+                            <button class="btn btn-outline-primary" type="button" id="button-addon2">Send Mail</button>
+                        </div>
+                    </div>
+                    <div class="col-3">
+                        <img src="{% static 'images/mail.png' %}" alt="" class="img-fluid">
+
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- mail section end -->
+
+    
+    <!-- main div end -->
+
+
+    <!-- model section -->
+    
+
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Connect with me</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="mb-3">
+                            <label for="recipient-name" class="col-form-label">Full Name:</label>
+                            <input type="text" class="form-control" id="recipient-name">
+                        </div>
+                        <div class="mb-3">
+                            <label for="message-text" class="col-form-label">Email:</label>
+                            <input type="email" class="form-control"></textarea>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Send message</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- footer section start -->
+    <footer class="foot my-auto bg-black">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-md-4 col-lg-4 my-4">
+                    <div class="d-flex gap-3">
+                        <img src="{% static 'images/logo.png' %}" alt="" height="30px" width="30px">
+                        <h4 class="fw-bold ">Sujal Maharjan</h4>
+                    </div>
+                    <p>I am a Cumputer Science student, learning and developing websites using Python and Django </p>
+                    <p>Copyright &copy Sujal Maharjan</p>
+                    <p>Connect me on Ifosuz77@gmail.com</p>
+                </div>
+
+                <div class="col-12 col-md-4 col-lg-2 my-4">
+                    <ul>
+                        <h3 class="fw-semibold">Links</h3>
+                        <li class="list-group"><a class="nav-link active" aria-current="page" href="#">Home</a></li>
+                        <li class="list-group"><a class="nav-link active" aria-current="page" href="#">My Portfolio</a>
+                        </li>
+                        <li class="list-group">My Team</li>
+                        <li class="list-group">Our Services</li>
+                    </ul>
+                </div>
+                <div class="col-12 col-md-4 col-lg-2 my-4">
+                    <ul>
+                        <h3 class="fw-semibold">Guides</h3>
+                        <li class="list-group">Getting Started</li>
+                        <li class="list-group">Starter Templates</li>
+                        <li class="list-group">Webpack</li>
+                        <li class="list-group">Parcel</li>
+                        <li class="list-group">Vite</li>
+                    </ul>
+                </div>
+                <div class="col-12 col-md-4 col-lg-2 my-4">
+                    <ul>
+                        <h3 class="fw-semibold">Projects</h3>
+                        <li class="list-group">Bootstrap 5</li>
+                        <li class="list-group">Bootstrap 4</li>
+                        <li class="list-group">Icons</li>
+                        <li class="list-group">RFS</li>
+                        <li class="list-group">Examples repo</li>
+                    </ul>
+                </div>
+                <div class="col-12 col-md-4 col-lg-2 my-4">
+                    <ul>
+                        <h3 class="fw-semibold">Community</h3>
+                        <li class="list-group">Issues</li>
+                        <li class="list-group">Discussions</li>
+                        <li class="list-group">Corporate sponsors</li>
+                        <li class="list-group">Open Collective</li>
+                        <li class="list-group">Stack Overflow</li>
+                    </ul>
+                </div>
+            </div>
+            <p class="text-center">&copy All Rights Reserved <span>Sujal</span></p>
+        </div>
+        <!-- <div class="text-center">
+            <p>&copy All Rights Reserved <span>Sujal</span></p>
+        </div> -->
+    </footer>
+    <!-- footer section end -->
+
+
+
+    <!-- bootstrap script js -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+
+
+    <!-- custom js link -->
+    <script src="{% static 'js/script.js' %}"></script>
+</body>
+
+</html>
